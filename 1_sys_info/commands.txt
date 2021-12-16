@@ -1,0 +1,21 @@
+    1  cat /etc/os-release
+    2  poweroff
+    3  [A
+    4  ifconfig
+    5  sudo apt install  net-tools
+    6  ifconfig
+    7  ps
+    8  ps aux
+    9  ps aux | gres sshd
+   10  ps aux | grep sshd
+   11  sudo ufw status verbose
+   12  sudo ufw disable
+   13  ps aux | grep sshd
+   14  ifconfig
+   15  cat /etc/os-release
+   16  echo > sys_info.sh
+   17  chmod +x sys_info.sh
+   18  ./sys_info > sys_info.txt
+   19  ./sys_info.sh > sys_info.txt
+   20  history
+   21  history > commands.txt
