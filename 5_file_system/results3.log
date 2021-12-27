@@ -1,0 +1,12 @@
+total 36
+1441943 -rwxrwxr-x 1 alex alex  664 Dec 27 20:13 1_create_file.sh
+1441949 -rwxrw-r-- 1 alex alex  164 Dec 27 21:52 2_renaming_references.sh
+1441955 -rwxrw-r-- 1 alex alex  417 Dec 27 22:07 3_files_with_dif_rights.sh
+1441959 -rwxrw-r-- 1 alex alex  420 Dec 27 22:15 4_making_file_group.sh
+1441945 -rw-rw-r-- 2 alex alex   53 Dec 27 21:53 file1
+1441950 -rw-rw-r-- 1 alex alex   53 Dec 27 21:53 file2
+1441948 -rw-rw-r-- 1 alex alex 3168 Dec 27 21:39 info.txt
+1441954 -rw------- 1 alex alex    0 Dec 27 22:16 readWrittenFileForCreator
+1441922 -rw-rw-r-- 1 alex alex   22 Dec 27 22:16 readWrittenFileForCreatorAndGroup
+1441946 drwxrwxr-x 2 alex alex 4096 Dec 27 21:53 results
+1441956 -rw-rw-r-- 1 alex alex    0 Dec 27 22:16 results3.log

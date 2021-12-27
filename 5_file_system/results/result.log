@@ -1,0 +1,4 @@
+total 4
+1441951 lrwxrwxrwx 1 alex alex  5 Dec 27 21:53 file3 -> file1
+1441945 -rw-rw-r-- 2 alex alex 53 Dec 27 21:53 file4
+1441947 -rw-rw-r-- 1 alex alex  0 Dec 27 21:53 result.log

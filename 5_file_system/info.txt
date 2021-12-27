@@ -1,0 +1,91 @@
+The linux file root is determined by the /
+
+media - is a folder of the flash and media devices
+
+inode is a system file ID. Type, user rights are linked to the respective inode
+inode is the primary. The respective file name is a secondary attribute.
+One physical file can point on different files with file names.
+There are soft and hard link in linux. Hard link points on the inode. Soft link points on
+the file name. 
+ls -l: type | user_rights| number of links| creator name | creator group | size | creation date | file-name
+ type-> d = directory, b= device file, c= symbol file, s= socket,
+            p= named pipe - = basic file l - soft link
+ rwxrwxrwx-> 
+    r read for creator
+    w write for creator (or removing directory)
+    x execution for creator (getting directory attributes)
+    r read for creator group
+    w write for creator group (or removing directory)
+    x execution for creator group (getting directory attributes)
+    r read for others
+    w write for others (or removing directory)
+    x execute for others (getting directory attributes)
+
+suid
+  suid =1. When somebody wants to execute the file with suid=1 then original creator
+    will be checked
+  sgid =1 When somebody wants to execute the file  with sgid =1 the original creator group
+   will be checked
+  Sticky sticky=1 means removing can be performed by the creator only
+
+The main root directories:
+  sbin - the main system binary files
+  boot - the main file  of the system loader
+  dev - the main devices folder. All hardware files
+  etc - the main config files for all software. 
+  home - user files
+  lib - libraries of system binaries
+  mnt - alternative mount folder
+  root - the selected directory for the root home
+  tmp - the sticky bit catalog for temporarl  file
+  usr - the user developed software binaries and sources
+  var - the catalogs of log files
+
+
+//-------------------------------------
+# Show disk info:
+ >> df -h -T -t ext4
+# Show disks with inode limit info
+ >> df -h -T -t ext4 -i
+# Show file tree for media. Media is the main mount  pointer
+ >> tree /media
+# Creating hard link
+ >> ln origin hard_link_name
+# Creating soft link
+ >> ln origin soft_link_name
+
+# The direct copy is not a link (soft or hard) Hard linked files are updated by the system
+# The soft link is a link by name
+# The simple copy makes a new file with copied content
+# Soft link is broken when origin is removed or renamed. Hard link is not broken for file naming
+# Hard link is stable for deleting and renaming
+# Hard link copies all rights
+# Hard link is not created for folder
+# Soft link is broken when the origin is moved to another directory
+# The file is removed fully when there are no any hard links for this file
+
+# Showing files with their inodes
+ >> ls -li
+
+chmod go -rw *
+
+# USER rights -> rwx GROUP -> rw OTHERS -> r
+chmod u=rwx,g=rw,o=r file1
+chmod a=rw *
+
+# Adding SUID for user executable files
+>> chmod u+s *
+# SUID is working for executable files S means no rights for x of the creator
+
+# Adding SGID for group
+>> chmod g+s *
+
+# Adding Sticky
+>> chmod +t
+
+>> chown user file_name
+>> chown :user_group file_name
+
+# recursive changing rights
+>> chown user file_name -r
+
