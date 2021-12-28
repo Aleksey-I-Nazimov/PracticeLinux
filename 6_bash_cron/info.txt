@@ -1,0 +1,72 @@
+sh - shell
+bash = born again shell
+
+#!/bin/bash - preliminary command for bash executing
+
+comments start with #
+
+# $(pwd) executing pwd
+# $USER reading env var
+
+echo "working dr": $(pwd)
+
+#!/bin/python - preliminary command for python enterpritator
+
+echo $SHELL
+cat /etc/shells
+
+# if operator
+if [$1 == 18]; then echo "Do smt"
+elif [$1 -lt18]; then echo ""
+elif [$1 -gt18]; then echo ""
+
+# case operator
+case $1 in
+  10) echo "oooo" ;;
+  100) echo "xxxx" ;;
+  50 | 60) echo "" ;;
+esac
+
+# for, while, until
+for n in {1..4}; do echo $n; done
+
+#while
+y=1
+while [$y -lt 10]
+do
+  echo $y
+  y=$(($y+1))
+done
+
+# until
+pointer = 20
+untill [$POINTER -lt10]
+do
+  echo POINTER $POINTER
+  let POINTER -=1
+done
+
+
+# cron is a service of scheduled operation system tasks
+>> crontab --help
+>> crontab -u
+>> crontab -e
+# cron works per minutes
+
+* * * * *
+1 2 3 4 5
+
+1 - munutes
+2 - hour
+3 - day of the month
+4 - month
+5 - day of the week
+
+# crontab.guru
+sudo cat /var/spool/cron/crontabs/student
+
+sudo service rsyslog restart
+sudo service cron restart
+
+
+
