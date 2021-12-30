@@ -1,4 +1,4 @@
->> echo "xxxxxxx" > test.txt
+>> echo "xxxxxxx" > /home/alex/dev/test.txt
 >> crontab -e
->> 0/10 * * * *	cp test.txt test.txt.bak
+>> */10 * * * *	cp /home/alex/dev/test.txt /home/alex/dev/test.txt.bak
 >> cat /var/log/syslog

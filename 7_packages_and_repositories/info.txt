@@ -1,0 +1,11 @@
+# The name of host:
+>> hostname -I
+
+# Rule list
+>> iptables -L
+
+>> iptables -t filter -A INPUT 192.168.0.107 -j DROP
+>> iptables -A OUTPUT -p tcp --dport 443 -j DROP
+>> iptables-save > file
+>> iptables-restore > file
+
