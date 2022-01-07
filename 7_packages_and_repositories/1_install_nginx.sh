@@ -11,3 +11,5 @@ sudo nginx -h 1> nginx_check.log 2>&1
 echo "  --> Removing nginx"
 sudo apt autoremove nginx -y 1> nginx_deinstallation.log
 
+sudo snap install docker
+
