@@ -1,0 +1,2 @@
+CONTAINER ID   IMAGE      COMMAND                  CREATED        STATUS                  PORTS                                   NAMES
+e0fd4f96ba96   my_nginx   "/bin/sh -c '/usr/sb…"   1 second ago   Up Less than a second   0.0.0.0:8080->80/tcp, :::8080->80/tcp   hungry_franklin
